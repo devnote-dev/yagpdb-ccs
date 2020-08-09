@@ -7,7 +7,7 @@
 	Remember to change everything in []
 */}}
 
-{{if not .ExecData.ID}}
+{{if not .ExecData}}
 	{{$args := parseArgs 2 "Syntax is: `-[CmdName] <user> <duration:seconds>`" (carg "user" "user to be muted") (carg "duration" "duration of mute")}}
 	{{$user := $args.Get 0}}
 	{{$delay := $args.Get 1}}
@@ -16,5 +16,5 @@
 	{{execCC .CCID nil $delay.Seconds $user}}
 {{else}}
 	{{ takeRoleID .ExecData.ID [CustomMuteRole] 0 }}
-	{{ print .ExecData.Username "#" .ExecData.Discriminator " has been unmuted: duration expired." }}
+	{{ print .ExecData.String " has been unmuted: duration expired." }}
 {{end}}
