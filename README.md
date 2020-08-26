@@ -9,7 +9,6 @@ Custom Mute CC v1.2
 
 ## Planned Custom Commands:
 
-- [ ] Working Counting Cc
 - [ ] Simple Time Conversion CC
 - [ ] Custom Mute v2 (database-centered, 1 role required only)
 
