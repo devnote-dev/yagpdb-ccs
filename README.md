@@ -4,12 +4,13 @@ I am currently taking any custom command requests in return for Nitro, if you're
 
 # Available custom commands:
 
-Custom Mute CC v1
+Custom Mute CC v1.2
 * A selective channel Mute custom commmand that works just like it sounds. It can be edited to also send messages in Mod-Log channels when used.
 
 # Planned Custom Commands:
 
+- [ ] Simple Channel Name Interval CC
+- [ ] Simple Time Conversion CC
 - [ ] Custom Mute v2 (database-centered, 1 role required only)
-- [ ] Starboard CC with embed compatibility
 
 *More custom commands will be added in future. If you wish to contribute or PR for any of these custom commands feel free to do so.*
