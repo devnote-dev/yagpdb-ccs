@@ -10,13 +10,13 @@ This custom command allows you to gather the JSON conversion of a message. The c
 
 Message Type | Description
 ------------ | -------------
-Message (default) | Default message evaluated
+Message (default) | Default message
 Embed | Embed message (with/without content)
 Content/Video | Discord Video Embed link (content)
 Attachment | GIF/image/file message attachment (content)
 
 ## Usage:
-(Change the prefix according to your set prefix, for demonstration the prefix is `
+(Change the prefix according to your set prefix, for demonstration the prefix is `-`
 
 `-json 0 <message-ID>` - Outputs JSON message (with `0` acting as `nil`, only runs if message is in the same channel)
 
