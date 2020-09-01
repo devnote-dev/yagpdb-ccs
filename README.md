@@ -4,8 +4,17 @@ I am currently taking any custom command requests in return for Nitro, if you're
 
 ## Available custom commands:
 
-Custom Mute CC v1.2
-* A selective channel Mute custom commmand that works just like it sounds. It can be edited to also send messages in Mod-Log channels when used.
+<details>
+  <summary>Custom Mute CC v1.2</summary>
+  <br>
+  A selective channel mute custom command that works just like it sounds. It can be edited to also send messages in Mod-Log channels when used.
+  </details>
+
+<details>
+  <summary>JSONify CC v4.6.5</summary>
+  <br>
+  Converts and outputs JSON format of messages, as well as IDs, message types, message snowflake, (etc). See README.md for more info.
+</details>
 
 ## Planned Custom Commands:
 
