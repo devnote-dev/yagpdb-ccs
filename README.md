@@ -19,6 +19,6 @@ I am currently taking any custom command requests in return for Nitro, if you're
 ## Planned Custom Commands:
 
 - [ ] Simple Time Conversion CC
-- [ ] Custom Mute v2 (database-centered, 1 role required only)
+- [ ] Custom Server Boost Message CC
 
 *More custom commands will be added in future. If you wish to contribute or PR for any of these custom commands feel free to do so.*
