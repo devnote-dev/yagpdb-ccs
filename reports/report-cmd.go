@@ -1,5 +1,5 @@
 {{/*
-    Custom Reports CC
+    Custom Reports Main CC
     
     Made By Devonte#0745 / Naru#6203
     Contributors: DZ#6669, Piter#5960
@@ -9,9 +9,11 @@
 */}}
 
 {{/* THINGS TO CHANGE */}}
-{{$logChannel := }} {{/* CHANNEL TO LOG REPORTS */}}
+
+{{$logChannel := }} {{/* Channel ID to log reports */}}
 
 {{/* ACTUAL CODE - DO NOT TOUCH */}}
+
 {{$ping := 0}}
 {{if .CmdArgs}}
     {{if or .Message.Mentions (reFind `\d{17,19}` (index .CmdArgs 0))}}
