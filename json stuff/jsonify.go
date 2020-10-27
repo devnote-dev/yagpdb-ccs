@@ -31,6 +31,7 @@
             {{end}}
         {{end}}
         {{$time := div $msg.ID 4194304|mult 1000000|toDuration}}
+        {{$type := printf "%T" $msg}}
         {{$json := json $msg}}
         {{if or (ge (len $json) 2048) (reFind `\[(?:{.*},?){4,}\]` $json)}}
             {{$fcpt = true}}
@@ -41,7 +42,7 @@
         {{end}}
     {{end}}
         {{if $fcpt}}
-            {{$f := (printf "REQUESTED: %s\nGUILD: %s - %d\nSNOWFLAKE: %s\nTYPE: %s\nJSON:\n\n%s" currentTime .Guild.Name .Guild.ID $time $type $json)}}
+            {{$f := (printf "REQUESTED: %s\nGUILD: %s - %d\nSNOWFLAKE: %s\nJSON:\n\n%s" currentTime .Guild.Name .Guild.ID $time $json)}}
             {{sleep 1}}
             {{deleteMessage nil $l 0}}
             {{sendMessage nil (complexMessage "content" $c "file" $f)}}
@@ -53,7 +54,7 @@
                 "fields" (cslice
                     (sdict "name" "Channel" "value" (print "<#" $channel ">\n(ID " $channel ")") "inline" true)
                     (sdict "name" "Message ID" "value" (print ($args.Get 1) "\n[Click here](" $msglink ") to go to message.") "inline" true)
-                    (sdict "name" "Message Type" "value" $struct "inline" true)
+                    (sdict "name" "Message Type" "value" (print $struct "\n`" $type "`") "inline" true)
                     (sdict "name" "Snowflake (Age)" "value" (humanizeDurationSeconds (currentTime.Sub ($time|.DiscordEpoch.Add))) "inline" true)
                     (sdict "name" "Size" "value" (print (fdiv (len $json) 1000) "kb") "inline" true))
                 "footer" (sdict "text" (print "JSONify v" $ver))}}
