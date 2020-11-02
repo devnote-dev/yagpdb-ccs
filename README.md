@@ -8,19 +8,22 @@ I am taking requests for CCs to add to this repository, if you're interested you
   <summary>Custom Mute CC</summary>
   <br>
   A selective channel mute custom command that works just like it sounds. It can be edited to also send messages in Mod-Log channels when used.
-  </details>
+  </br>
+</details>
 
 <details>
   <summary>JSONify CC v4.11</summary>
   <br>
-  Converts and outputs JSON format of messages, as well as IDs, message types, message snowflake, (etc). See [README.md](https://github.com/NaruDevnote/yagpdb-ccs/blob/master/json%20stuff/README.md) for more info.
+  Converts and outputs JSON format of messages, as well as IDs, message types, message snowflake, (etc). See README.md for more info.
+  </br>
 </details>
 
 <details>
   <summary>Report CCs (grouped v1)</summary>
   <br>
-  A fully functioning reports system with reaction interactions, database storage, and admin commands. You can find out more info in the [README.md](https://github.com/NaruDevnote/yagpdb-ccs/blob/master/reports/README.md)
-  </details>
+  A fully functioning reports system with reaction interactions, database storage, and admin commands. You can find out more info in the README.md
+  </br>
+</details>
 
 ## Planned Custom Commands:
 
