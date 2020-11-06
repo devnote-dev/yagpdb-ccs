@@ -1,10 +1,10 @@
 {{/*
-    Custom Reports Admins CC
+    Custom Reports Admins CC v2
     
     Made By Devonte#0745 / Naru#6203
     
     Recommended Trigger Type: Regex
-    Recommended Trigger     : \A-r(eport)?a(dmin)?(\s+|\z)
+    Recommended Trigger     : \A-r(?:eport)?a(?:dmin)?(?:\s+|\z)
 */}}
 
 {{/* THINGS TO CHANGE */}}
@@ -19,11 +19,7 @@
         {{if ge (len .CmdArgs) 4}}
             {{$reason := joinStr " " (slice .CmdArgs 2)}}
             {{if ($report := index (getMessage $logChannel (index .CmdArgs 1)).Embeds 0|structToSdict)}}
-                {{range $k, $v := $report}}
-                    {{if eq (kindOf $v true) "struct"}}
-                        {{$report.Set $k (structToSdict $v)}}
-                    {{end}}
-                {{end}}
+                {{range $k, $v := $report}}{{if eq (kindOf $v true) "struct"}}{{$report.Set $k (structToSdict $v)}}{{end}}{{end}}
                 {{$rUser := (userArg (reReplace `\(|\)` (reFind `\d{17,19}` $report.Description) "")).ID}}
                 {{with $report}}
                     {{.Set "description" (print "Report **reopened** by " $.User.String "\n**Reason:** " $reason " [\u200b](" $rUser ")")}}
@@ -39,26 +35,13 @@
                 Unknown Report. Check that you have the correct ID.
             {{end}}
         {{else}}
-            {{print .User.Mention " Something went wrong with that command! Make sure you format it like this:\n`-reportadmin reopen <messageID> <reason>`"}}
-        {{end}}
-    {{else if eq $cmd "delall" "deleteallreports"}}
-        {{if eq (len .CmdArgs) 2}}
-            {{$user := (userArg (index .CmdArgs))}}
-            {{if (dbGet $user.ID "reports")}}
-                {{dbDel $user.ID "reports"}}
-                Successfully deleted the report history for {{$user.String}}.
-                {{deleteTrigger 6}}{{deleteResponse 6}}
-            {{else}}
-                **Error:** {{$user.String}} has no previous reports.
-            {{end}}
-        {{else}}
-            {{print .User.Mention " Something went wrong with that command! Make sure you format it like this:\n`-reportadmin dellallreports @user/ID`"}}
+            {{print .User.Mention " Something went wrong with that command! Make sure you format it like this:\n`-reportadmin reopen <messageID> <reason>` - Reason must be 2 words or more."}}
         {{end}}
     {{else if eq $cmd "reacthelp"}}
-        {{sendMessage nil (cembed "title" "Reactions Help" "description" "✅ - Marks a report as finished / done (solved without mod action).\n❎ - Marks a report as ignored or false report (no mod action)\n\n🛡 - Displays the reactions for mod actions:\n\n❌ - cancels mod action and returns to default reaction menu\n⚠ - Warns the user\n🔇 - Mutes the user (server default time)\n👢 - Kicks the user\n🔨 ~~YEETS~~ Bans the user\n\nAll reasons for mod actions can be configured in the reaction-listener code." "color" 0xfe3025)}}
+        {{sendMessage nil (cembed "title" "Reactions Help" "description" "✅ - Marks a report as finished / done (solved without mod action).\n❎ - Marks a report as ignored or false report (no mod action)\n\n🛡 - Displays the reactions for mod actions:\n\n❌ - cancels mod action and returns to default reaction menu\n⚠ - Warns the user\n🔇 - Mutes the user (server default time)\n👢 - Kicks the user\n🔨 - ~~YEETS~~ Bans the user\n\nAll reasons for mod actions can be configured in the reaction-listener code." "color" 0xfe3025)}}
     {{else}}
         Unknown command. Please try again.
     {{end}}
 {{else}}
-    {{sendMessage nil (cembed "title" "Report Admin Commands" "description" "Command Aliases: `ra, radmin, reporta`\n\n`-ra reopen <messageID> <reason>` - Reopens a closed report.\n`-ra deleteAllreports @user/ID` - Deletes the report history from a user.\n(Alias: delall)\n`-ra reacthelp` - Reactions Help page." "color" 0xfe3025)}}
+    {{sendMessage nil (cembed "title" "Report Admin Commands" "description" "Command Aliases: `ra, radmin, reporta`\n\n`-ra reopen <messageID> <reason>` - Reopens a closed report.\n`-ra reacthelp` - Reactions Help page." "color" 0xfe3025)}}
 {{end}}
