@@ -1,5 +1,5 @@
 {{/*
-    Custom Reports ReactionListener CC
+    Custom Reports ReactionListener CC v2
     
     Made By Devonte#0745 / Naru#6203
     Contributors: DZ#6669, Piter#5960
@@ -8,6 +8,7 @@
 */}}
 
 {{/* THINGS TO CHANGE */}}
+
 {{$staff := cslice ROLEID ROLEID}} {{/* A list of roles for people considered Admins. Replace ROLEID accordingly. */}}
 
 {{$logChannel := }} {{/* Channel ID to log reports */}}
@@ -66,17 +67,33 @@
                     {{if (dbGet 7 "modaction")}}
                         {{$action := ""}}
                         {{if eq .Reaction.Emoji.Name "⚠"}}
-                            {{$s := execAdmin "warn" $user $warn}}
-                            {{$action = "warned"}}
+                            {{if (reFind `(?i)ManageMessages` (exec "viewperms 204255221017214977"))}}
+                                {{$s := execAdmin "warn" $user $warn}}{{$action = "warned"}}
+                            {{else}}
+                                {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "⚠"}}
+                                {{print .User.Mention ", unable to warn the user: Missing Permissions `ManageMessages`"}}
+                            {{end}}
                         {{else if eq .Reaction.Emoji.Name "🔇"}}
-                            {{$s := execAdmin "mute" $user $mute}}
-                            {{$action = "muted"}}
+                            {{if (reFind `(?i)KickMembers` (exec "viewperms 204255221017214977"))}}
+                                {{$s := execAdmin "mute" $user $mute}}{{$action = "muted"}}
+                            {{else}}
+                                {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "🔇"}}
+                                {{print .User.Mention ", unable to mute the user: Missing Permissions `KickMembers`"}}
+                            {{end}}
                         {{else if eq .Reaction.Emoji.Name "👢"}}
-                            {{$s := execAdmin "kick" $user $kick}}
-                            {{$action = "kicked"}}
+                            {{if (reFind `(?i)KickMembers` (exec "viewperms 204255221017214977"))}}
+                                {{$s := execAdmin "kick" $user $kick}}{{$action = "kicked"}}
+                            {{else}}
+                                {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "👢"}}
+                                {{print .User.Mention ", unable to kick the user: Missing Permissions `KickMembers`"}}
+                            {{end}}
                         {{else if eq .Reaction.Emoji.Name "🔨"}}
-                            {{$s := execAdmin "ban" $user $ban}}
-                            {{$action = "banned"}}
+                            {{if (reFind `(?i)BanMembers` (exec "viewperms 204255221017214977"))}}
+                                {{$s := execAdmin "BanMembers" $user $ban}}{{$action = "banned"}}
+                            {{else}}
+                                {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "🔨"}}
+                                {{print .User.Mention ", unable to ban the user: Missing Permissions `BanMembers`"}}
+                            {{end}}
                         {{else if eq .Reaction.Emoji.Name "❌"}}
                             {{deleteAllMessageReactions nil .ReactionMessage.ID}}
                             {{addMessageReactions nil .ReactionMessage.ID "✅" "❎" "🛡"}}
@@ -84,7 +101,7 @@
                         {{if $action}}
                             {{with $report}}
                                 {{.Set "color" 0xfe3025}}
-                                {{.Set "description" (print "ModAction: **" $action "** by " $mod " [\u200b](" $user ")")}}
+                                {{.Set "description" (print "Mod-Action: **" $action "** by " $mod " [\u200b](" $user ")")}}
                                 {{.Set "timestamp" currentTime}}
                                 {{.Author.Set "icon_url" .Author.IconURL}}
                             {{end}}
