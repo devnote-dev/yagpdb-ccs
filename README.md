@@ -1,6 +1,8 @@
 # YAGPDB-CCs
-The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. :)
-I am taking requests for CCs to add to this repository, if you're interested you can also contact me on Discord through DMs, my tag is **@Devonte#0745**.
+The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **@Devonte#0745** :)
+I am currently taking requests for CCs to add to this repository!
+
+***Note: I cannot be contacted through Discord at the moment so any suggestions/requests/issues should be made by opening an issue or PR in this github!***
 
 ## Available custom commands:
 
@@ -27,6 +29,7 @@ I am taking requests for CCs to add to this repository, if you're interested you
 
 ## Planned Custom Commands:
 
+- [ ] Ghost Ping Detection (REVAMPED)
 - [ ] Snipe CC
 - [ ] Simple Time Conversion CC
 - [ ] Custom Server Boost Message CC
