@@ -21,7 +21,7 @@ I am currently taking requests for CCs to add to this repository!
 </details>
 
 <details>
-  <summary>Report CCs (grouped v1)</summary>
+  <summary>Report CCs (grouped v2)</summary>
   <br>
   A fully functioning reports system with reaction interactions, database storage, and admin commands. You can find out more info in the README.md
   </br>
