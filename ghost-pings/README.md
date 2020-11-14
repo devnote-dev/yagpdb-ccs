@@ -2,8 +2,6 @@
 
 The custom commands for this CC group are purposefully made to be interchangeable (basically you are free to edit parts of the code if you are experienced with YAGPDB code). If you choose to do so, please keep the credits in the CC. Thanks :)
 
-*I am aware that **version 2** is not on this Github yet, there are some minor changes I need to make before publishing. Please be patient, thank you.*
-
 Features | V1 | V2
 ---------|----|----
 Double `exec` check for ghost-ping | ✅ | ✅
