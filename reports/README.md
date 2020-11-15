@@ -4,17 +4,21 @@ A relatively easy-to-use reports CC with reaction mod actions and report logs.
 ## Features
 - Reactions for quick and easy moderation
 - (Integrated moderation actions)
+- Configurable Reports Ping
+- Report Logging
 - Message logs
 - `reportadmin` commands for utilities
 
 ## Usage
 
 ### Main Command
-`-report <@user/ID> <reason>` - Sends the report
+`-report <@User/ID> <reason>` - Sends the report
 
-**Reports Interface:**
+You **must** disable the built-in `report` command with command overrides to prevent separate executions and whatnot. If you need help with setting up command overrides, join the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) and ask for help.
 
-![Interface Image](https://cdn.discordapp.com/attachments/770405826497740860/774392633032310804/unknown.png)
+**Report Interface:**
+
+![](https://cdn.discordapp.com/attachments/770405826497740860/777623571043319848/unknown.png)
 
 ### Reaction Menu
 - ✅ - Marks a report as done/completed (no need for mod actions)
@@ -35,20 +39,24 @@ Aliases: `ra, radmin, reporta`
 
 `-reportadmin reopen <messageID> <reason>` - Reopens a closed report. A reason is required for this, it must be longer than 2 words.
 
-`-reportadmin deleteAllreports <@user/ID>` - Deletes the report history of a specified user.
-Aliases: `delall`
-**This command has been removed from newer versions due to database issues.**
+`-reportadmin resetreactions <messageID>` - Resets the reactions on a report message if unresponsive.
+Aliases: `rr`
+
+`-reportadmin history <@User/ID>` - Displays the report history of the specified user.
+
+`-reportadmin deletehistory <@User/ID>` - Deletes the entire report history of a user. **This cannot be undone.**
+Aliases: `delhistory`
 
 `-reportadmin reacthelp` - Displays the reactions help page.
 
 ## Planned Features
 
-- [ ] `resetreactions`/`rr` option for reportadmin when modaction times out
-- [ ] Centralise report logs under one DB Key (when finished, it will be key `7`)
+- [ ] Centralise report logs under one DB Key (when finished, it will be key `7`) (DBKey7)
 - [ ] Interchangeable reasons for mod actions (basically ease of access)
 
 ## Other Info
-Reports have been removed in the current update in order to fix the message-embed and reaction bugs. Additionally, permission checks have been added for the moderation actions to clear up default error messages/make them more user-friendly. :)
-There is a slight issue with reactions when going to the mod action menu, that is simply due to YAGPDB lag, I cannot do anything about that. It will not affect the moderation actions, only make it look weird. The `sleep` timeout has been increased to try and combat this.
+There is a slight issue with reactions when going to the mod action menu, that is simply due to YAGPDB lag, I cannot do anything about that. It will not affect the moderation actions, only make it look weird.
+
+The newest version (v3) now has functional report history logging (thoroughly tested) as well as the new reportadmin commands. Logs are currently stored in reported-user's individual DB entries, if this method remains stable, the DBKey7 plan will be scrapped, and I will optimise this instead. :)
 
 *If you find any bugs or issues, feel free to PR an issue or fix, or contact me through the YAGPDB Support Server*
