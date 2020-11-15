@@ -1,6 +1,7 @@
 # YAGPDB-CCs
 The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **@Devonte#0745** (ID 622146791659405313) 😉
-I am currently taking requests for CCs to add to this repository!
+
+**I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
 ## Available custom commands:
 
@@ -20,7 +21,7 @@ I am currently taking requests for CCs to add to this repository!
 </details>
 
 <details>
-  <summary>Report CCs (grouped v2)</summary>
+  <summary>Report CCs (v2-v3)</summary>
   <br>
   A fully functioning reports system with reaction interactions, database storage, and admin commands. You can find out more info in the README.md
   </br>
@@ -35,7 +36,10 @@ I am currently taking requests for CCs to add to this repository!
 
 ## Planned Custom Commands:
 
-- [X] Ghost Ping Detection - **Recently added!**
+- [ ] Softban CC System
 - [ ] Snipe CC
+
+## Contributing
+If you have a suggestion for a custom command or custom commands to be made or added to this repo, contact me through Discord or open an Issue with "suggestion" in the name and I will get back to you ASAP!
 
 *More custom commands will be added in future. If you wish to contribute or PR for any of these custom commands feel free to do so.*
