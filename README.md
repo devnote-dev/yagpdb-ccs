@@ -1,8 +1,6 @@
 # YAGPDB-CCs
-The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **@Devonte#0745** :)
+The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **@Devonte#0745** (ID 622146791659405313) 😉
 I am currently taking requests for CCs to add to this repository!
-
-***Note: I cannot be contacted through Discord at the moment so any suggestions/requests/issues should be made by opening an issue or PR in this github!***
 
 ## Available custom commands:
 
@@ -10,6 +8,7 @@ I am currently taking requests for CCs to add to this repository!
   <summary>Custom Mute CC</summary>
   <br>
   A selective channel mute custom command that works just like it sounds. It can be edited to also send messages in Mod-Log channels when used.
+  *Note:* this CC is no longer supported as there are more efficient versions of this code. Eventually, when there are more CCs added to this repository, this custom command will be removed.
   </br>
 </details>
 
@@ -27,11 +26,16 @@ I am currently taking requests for CCs to add to this repository!
   </br>
 </details>
 
+<details>
+  <summary>Ghost-Ping Detection (v1 & v2)</summary>
+  <br>
+  An accurate ghost-ping detection custom command with optional double checks, mention checks (for edited messages) and more. Ghost-Ping CCs are purposefully made to be easily edited / interchangeable, see README.md fore more info.
+  </br>
+</details>
+
 ## Planned Custom Commands:
 
-- [ ] Ghost Ping Detection (REVAMPED)
+- [X] Ghost Ping Detection - **Recently added!**
 - [ ] Snipe CC
-- [ ] Simple Time Conversion CC
-- [ ] Custom Server Boost Message CC
 
 *More custom commands will be added in future. If you wish to contribute or PR for any of these custom commands feel free to do so.*
