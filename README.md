@@ -41,5 +41,3 @@ The custom commands posted here are for free use, however if you do with to supp
 
 ## Contributing
 If you have a suggestion for a custom command or custom commands to be made or added to this repo, contact me through Discord or open an Issue with "suggestion" in the name and I will get back to you ASAP!
-
-*More custom commands will be added in future. If you wish to contribute or PR for any of these custom commands feel free to do so.*
