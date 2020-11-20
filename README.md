@@ -36,8 +36,13 @@ The custom commands posted here are for free use, however if you do with to supp
 
 ## Planned Custom Commands:
 
+- [ ] Counting CC (simplified from TimCampy118#5636's original)
+- [ ] GetColour CC
+- [ ] Custom Poll CC
 - [ ] Softban CC System
 - [ ] Snipe CC
+
+*This list is in order of priority, so you may see it changing often*
 
 ## Contributing
 If you have a suggestion for a custom command or custom commands to be made or added to this repo, contact me through Discord or open an Issue with "suggestion" in the name and I will get back to you ASAP!
