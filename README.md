@@ -37,10 +37,11 @@ The custom commands posted here are for free use, however if you do with to supp
 ## Planned Custom Commands:
 
 - [ ] Counting CC (simplified from TimCampy118#5636's original)
+- [ ] Open-Template Suggestion CCs
 - [ ] GetColour CC
-- [ ] Custom Poll CC
 - [ ] Softban CC System
 - [ ] Snipe CC
+- [ ] Custom Poll CC
 
 *This list is in order of priority, so you may see it changing often*
 
