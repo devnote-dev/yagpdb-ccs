@@ -9,7 +9,7 @@ The custom commands posted here are for free use, however if you do with to supp
   <summary>Custom Mute CC</summary>
   <br>
   A selective channel mute custom command that works just like it sounds. It can be edited to also send messages in Mod-Log channels when used.
-  *Note:* this CC is no longer supported as there are more efficient versions of this code. Eventually, when there are more CCs added to this repository, this custom command will be removed.
+  <strong>Note:</strong> this CC is no longer supported as there are more efficient versions of this code. Eventually, when there are more CCs added to this repository, this custom command will be removed.
   </br>
 </details>
 
@@ -34,9 +34,15 @@ The custom commands posted here are for free use, however if you do with to supp
   </br>
 </details>
 
+<details>
+  <summary>Counting System CCs</summary>
+  <br>
+  An updated, smaller, more efficient version of the counting CCs made by TimCampy118#5636 on Discord, with additional commands, leaderboard pagination, and less lag!
+  </br>
+</details>
+
 ## Planned Custom Commands:
 
-- [ ] Counting CC (simplified from TimCampy118#5636's original)
 - [ ] Open-Template Suggestion CCs
 - [ ] GetColour CC
 - [ ] Softban CC System
