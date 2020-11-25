@@ -12,7 +12,7 @@ This is an updated and more efficient version of **TimCampy118#5636**'s original
 - Additional counting commands
 
 ## Usage
-This is primarily for the count commands, usage for the main command is just... count.
+This is primarily for the count commands, usage for the main command is just... count. Remember to limit the channels the main CC can run in to the count channel only!!!
 
 In the reaction CC, the `$tracker` variable must be switched to `true` if you are going to use the count commands. The default is `false` in favour of users that don't want to use the commands or waste DB space.
 
