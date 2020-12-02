@@ -25,22 +25,28 @@
         "color" (randInt 111111 999999)
         "footer" (sdict "text" "You can delete this message now :)"))}}
 {{else}}
-    {{$cUser := (toInt (dbGet 5 "c_counter").Value)}}
-    {{$cCount := (toInt (dbGet 5 "c_count").Value)}}
-    {{if ($n := reFind `\A\d+\z` (joinStr " " .Args))}}
-        {{if ne .User.ID $cUser}}
-            {{if eq (toInt $n) (add $cCount 1)}}
-                {{if $roleID}}
-                    {{takeRoleID $cUser $roleID}}{{addRoleID $roleID}}
-                {{end}}
-                {{dbSet 5 "c_count" $n}}
-                {{dbSet 5 "c_counter" (str .User.ID)}}
-                {{if $tracker}}
-                    {{$_ := dbIncr .User.ID "count_tracker" 1}}
-                {{end}}
-            {{else}}{{deleteTrigger 0}}{{end}}
+    {{if not .ExecData}}
+        {{$cUser := (toInt (dbGet 5 "c_counter").Value)}}
+        {{$cCount := (toInt (dbGet 5 "c_count").Value)}}
+        {{if ($n := reFind `\A\d+\z` (joinStr " " .Args))}}
+            {{if ne .User.ID $cUser}}
+                {{if eq (toInt $n) (add $cCount 1)}}
+                    {{if $roleID}}
+                        {{takeRoleID $cUser $roleID}}{{addRoleID $roleID}}
+                    {{end}}
+                    {{dbSet 5 "c_count" $n}}
+                    {{dbSet 5 "c_counter" (str .User.ID)}}
+                    {{if $tracker}}
+                        {{$_ := dbIncr .User.ID "count_tracker" 1}}
+                    {{end}}
+                {{else}}{{deleteTrigger 0}}{{end}}
+            {{else}}
+                {{deleteTrigger 0}}{{sendDM "You cant count twice in a row!"}}
+            {{end}}
         {{else}}
-            {{deleteTrigger 0}}{{sendDM "You cant count twice in a row!"}}
+            {{deleteTrigger 0}}
+            {{cancelScheduledUniqueCC .CCID "countclr"}}
+            {{scheduleUniqueCC .CCID nil 12 "countclr" true}}
         {{end}}
-    {{else}}{{deleteTrigger 0}}{{end}}
+    {{else}}{{$_ := execAdmin "clear 100 204255221017214977 -nopin"}}{{end}}
 {{end}}
