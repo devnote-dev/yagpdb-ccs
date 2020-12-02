@@ -10,6 +10,7 @@ This is an updated and more efficient version of **TimCampy118#5636**'s original
 - Simpler code (easier to edit)
 - Paginated leaderboard embed (less lag)
 - Additional counting commands
+- Auto-schedule clean of commands (stuff that shouldn't be in counting)
 
 ## Usage
 This is primarily for the count commands, usage for the main command is just... count. Remember to limit the channels the main CC can run in to the count channel only!!!
