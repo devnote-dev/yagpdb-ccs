@@ -14,7 +14,7 @@ The custom commands posted here are for free use, however if you do with to supp
 </details>
 
 <details>
-  <summary>JSONify CC v4.11</summary>
+  <summary>JSONify CC v4.15</summary>
   <br>
   Converts and outputs JSON format of messages, as well as IDs, message types, message snowflake, (etc). See README.md for more info.
   </br>
@@ -43,11 +43,11 @@ The custom commands posted here are for free use, however if you do with to supp
 
 ## Planned Custom Commands:
 
-- [ ] Open-Template Suggestion CCs
+- [ ] Starboard CC
 - [ ] GetColour CC
 - [ ] Softban CC System
 - [ ] Snipe CC
-- [ ] Custom Poll CC
+- [ ] Open-Template Suggestion CCs (DELAYED due to yag-lag)
 
 *This list is in order of priority, so you may see it changing often*
 
