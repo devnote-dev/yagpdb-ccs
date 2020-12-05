@@ -52,7 +52,7 @@
                 "color" $col
                 "timestamp" currentTime}}
             {{sendMessage nil $embed}}
-        {{else}}{{$c.Username}} has not counted yet.{{end}}
+        {{else}}{{$u.Username}} has not counted yet.{{end}}
     {{else}}
         {{if ($u := getMember $c)}}
             {{with (dbGet $u.User.ID "count_tracker")}}
