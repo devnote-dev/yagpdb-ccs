@@ -1,7 +1,7 @@
 {{/*
     Ghost-Ping Detector CC v2
 
-    Made By Devonte#07545 / Naru#6203
+    Made By Devonte#0745 / Naru#6203
 
     Recommended Trigger Type: Regex
     Recommended Trigger     : .*
