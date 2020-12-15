@@ -1,5 +1,5 @@
 # YAGPDB-CCs
-The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **@Devonte#0745** (ID 622146791659405313) 😉
+The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **Devonte#0745** (ID 622146791659405313) 😉
 
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
@@ -43,13 +43,16 @@ The custom commands posted here are for free use, however if you do with to supp
 
 ## Planned Custom Commands:
 
-- [ ] Starboard CC
 - [ ] GetColour CC
-- [ ] Softban CC System
-- [ ] Snipe CC
 - [ ] Open-Template Suggestion CCs (DELAYED due to yag-lag)
+- [ ] Softban CC System
 
 *This list is in order of priority, so you may see it changing often*
 
+## Other Info
+- The Starboard CC project has been suspended as there is a much better system made by **Crenshaw1312**! [Click Here](https://github.com/Crenshaw1312/Yagpdb-ccs/tree/master/Fun/starboard) to go to his repo, his system also has optional plugins compatible with YouTube links, Twitter feed links, and Github links!
+- The first template suggestion CC has been pushed, [click here](https://github.com/NaruDevnote/yagpdb-ccs/tree/master/template-suggestions/v1) to go to version one.
+- Snipe CC is being removed again because there is no proper use for it.
+
 ## Contributing
-If you have a suggestion for a custom command or custom commands to be made or added to this repo, contact me through Discord or open an Issue with "suggestion" in the name and I will get back to you ASAP!
+If you have a suggestion for a custom command or custom commands to be made or added to this repo, you can contact me through Discord, comment your suggestion in the new discussions area in this repo, or open an Issue with "suggestion" in the name and I will get back to you ASAP!
