@@ -18,18 +18,18 @@ You **must** disable the built-in `report` command with command overrides to pre
 
 **Report Interface:**
 
-![](https://cdn.discordapp.com/attachments/770405826497740860/777623571043319848/unknown.png)
+![Interface](https://cdn.discordapp.com/attachments/783061830842974280/788258776707760128/unknown.png)
 
 ### Reaction Menu
 - ✅ - Marks a report as done/completed (no need for mod actions)
 - ❎ - Marks a report as ignored, for example false reports, etc
-- 🛡 - Displays the mod actions react menu
 
-- ❌ - Returns to the main reactions menu
-- ⚠ - Executes a warning on the user
-- 🔇 - Executes a mute on the user
-- 👢 - Executes kick command on the user
-- 🔨 - Executes a ban on the user
+- 🛡 - Displays the mod actions react menu
+    - ❌ - Returns to the main reactions menu
+    - ⚠ - Executes a warning on the user
+    - 🔇 - Executes a mute on the user
+    - 👢 - Executes kick command on the user
+    - 🔨 - Executes a ban on the user
 
 *Note: All moderation actions are executed on the user being **reported**, not the user who reported them. Additionally, there currently isn't a way to change the action messages unless you physically change the code in the ReactionListener CC (at the top).*
 
@@ -51,7 +51,6 @@ Aliases: `delhistory`
 
 ## Planned Features
 
-- [ ] Centralise report logs under one DB Key (when finished, it will be key `7`) (DBKey7)
 - [ ] Interchangeable reasons for mod actions (basically ease of access)
 
 ## Other Info
