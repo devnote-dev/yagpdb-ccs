@@ -2,7 +2,7 @@
     Custom Reports ReactionListener CC v2
     
     Made By Devonte#0745 / Naru#6203
-    Contributors: DZ#6669, Piter#5960
+    Contributors: DZ#6669, Piter#5960, WickedWizard#3588
     
     Recommended Trigger Type: Reaction - Added Only
 */}}
@@ -12,12 +12,6 @@
 {{$staff := cslice ROLEID ROLEID}} {{/* A list of roles for people considered Admins. Replace ROLEID accordingly. */}}
 
 {{$logChannel := }} {{/* Channel ID to log reports */}}
-
-{{/* Messages / reasons for mod actions */}}
-{{$warn := "Please follow the rules in this server."}}
-{{$mute := "Please follow the rules in this server."}}
-{{$kick := "Try again next time."}}
-{{$ban := "Don't break the rules here"}}
 
 {{/* ACTUAL CODE - DO NOT TOUCH */}}
 
@@ -68,6 +62,9 @@
                         {{$action := ""}}
                         {{if eq .Reaction.Emoji.Name "⚠"}}
                             {{if (reFind `(?i)ManageMessages` (exec "viewperms 204255221017214977"))}}
+                                {{sendMessage nil "30s. Type out the reason why you want to warn that user."}}
+				                {{sleep 30}}
+				                {{$warn := (dbGet 0 "warn_kick_mute_ban").Value}}
                                 {{$s := execAdmin "warn" $user $warn}}{{$action = "warned"}}
                             {{else}}
                                 {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "⚠"}}
@@ -75,6 +72,9 @@
                             {{end}}
                         {{else if eq .Reaction.Emoji.Name "🔇"}}
                             {{if (reFind `(?i)KickMembers` (exec "viewperms 204255221017214977"))}}
+                                {{sendMessage nil "30s. Type out the reason why you want to mute that user."}}
+				                {{sleep 30}}
+				                {{$mute := (dbGet 0 "warn_kick_mute_ban").Value}}
                                 {{$s := execAdmin "mute" $user $mute}}{{$action = "muted"}}
                             {{else}}
                                 {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "🔇"}}
@@ -82,6 +82,9 @@
                             {{end}}
                         {{else if eq .Reaction.Emoji.Name "👢"}}
                             {{if (reFind `(?i)KickMembers` (exec "viewperms 204255221017214977"))}}
+                                {{sendMessage nil "30s. Type out the reason why you want to kick that user."}}
+				                {{sleep 30}}
+				                {{$kick := (dbGet 0 "warn_kick_mute_ban").Value}}
                                 {{$s := execAdmin "kick" $user $kick}}{{$action = "kicked"}}
                             {{else}}
                                 {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "👢"}}
@@ -89,6 +92,9 @@
                             {{end}}
                         {{else if eq .Reaction.Emoji.Name "🔨"}}
                             {{if (reFind `(?i)BanMembers` (exec "viewperms 204255221017214977"))}}
+                                {{sendMessage nil "30s. Type out the reason why you want to ban that user."}}
+				                {{sleep 30}}
+				                {{$ban := (dbGet 0 "warn_kick_mute_ban").Value}}
                                 {{$s := execAdmin "BanMembers" $user $ban}}{{$action = "banned"}}
                             {{else}}
                                 {{deleteMessageReaction nil .ReactionMessage.ID .Reaction.UserID "🔨"}}
