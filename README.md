@@ -1,6 +1,9 @@
 # YAGPDB-CCs
 The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **Devonte#0745** (ID 622146791659405313) 😉
 
+**PLEASE NOTE:**
+Even though there hasn't been any recent updates to this repository I am very much still at work with new and existing CCs. With the new license in place, I need to update all existing CCs in this repo to follow it, but instead of pushing singular updates, I'm going to push one big update for the whole repo. This should be done within a day or two from this being published. Thanks for your patience!
+
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
 ## Available custom commands:
