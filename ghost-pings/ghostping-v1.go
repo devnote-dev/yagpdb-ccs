@@ -6,6 +6,9 @@
     Recommended Trigger Type: Regex
     Recommended Trigger     : .*
     Optional Trigger        : <@!?\d{17,19}>
+    
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{/* THINGS TO CHANGE */}}
