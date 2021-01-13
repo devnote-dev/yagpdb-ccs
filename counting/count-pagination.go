@@ -1,9 +1,12 @@
 {{/*
     Counting Pagination Reaction CC
 
-    Made By Devonte#07545 / Naru#6203
+    Made By Devonte#0745 / Naru#6203
 
     Trigger Type: Reaction (Added Only)
+
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{if .ReactionAdded}}
