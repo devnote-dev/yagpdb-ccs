@@ -63,7 +63,9 @@
                             {{if eq .Emoji.ID 737036090510278716}}{{$total.Set "upvotes" .Count}}{{end}}
                             {{if eq .Emoji.ID 737036123767046155}}{{$total.Set "downvotes" .Count}}{{end}}
                         {{end}}
-                        {{$msg.Set "fields" (cslice (sdict "name" "Final Count" "value" (print "<:check:737036090510278716> " $total.upvotes "\n<:cross:737036123767046155> " $total.downvotes) "inline" true) (sdict "name" "Staff Responsible" "value" (printf "• %s - %s\n• ID %d" .User.Mention .User.String .User.ID) "inline" true))}}
+                        {{$upvotes := sub $total.upvotes 1}}
+                        {{$downvotes := sub $total.downvotes 1}}
+                        {{$msg.Set "fields" (cslice (sdict "name" "Final Count" "value" (print "<:check:737036090510278716> " $upvotes "\n<:cross:737036123767046155> " $downvotes) "inline" true) (sdict "name" "Staff Responsible" "value" (printf "• %s - %s\n• ID %d" .User.Mention .User.String .User.ID) "inline" true))}}
                         {{if eq .Reaction.Emoji.ID 737036090510278716}}
                             {{sendMessage $main_channel (complexMessage "content" (print "<@" $auth "> Your suggestion was approved!") "embed" (cembed $msg))}}
                         {{else if eq .Reaction.Emoji.ID 737036123767046155}}
