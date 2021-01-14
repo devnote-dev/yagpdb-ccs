@@ -1,5 +1,5 @@
 {{/*
-    Template-Suggestions v1 Main CC
+    Suggestions v1 Main CC
 
     Made By Devonte#0745 / Naru#6203
 
