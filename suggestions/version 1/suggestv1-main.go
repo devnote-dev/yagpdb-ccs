@@ -7,6 +7,9 @@
     Recommended Trigger     : \A
 
     NOTE: Make sure this only runs in the suggestion channel (see tmplsuggest-v1.md for more info)
+
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{/* THINGS TO CHANGE */}}
@@ -31,6 +34,6 @@
         "footer" (sdict "text" (print "Submit suggestions by typing in suggestions | User: " .User.ID))
         "timestamp" currentTime}}
     {{if .Message.Attachments}}{{$embed.Set "image" (index .Message.Attachments 0)}}{{end}}
-    {{$id := sendMessageRetID nil (cembed $embed)}}{{addMessageReactions nil $id "check:737036090510278716" ":cross:737036123767046155" "💬" "🛡"}}
+    {{$id := sendMessageRetID nil (cembed $embed)}}{{addMessageReactions nil $id ":checkgreen:796925441771438080" ":crossred:796925441490681889" "💬" "🛡"}}
     {{dbSetExpire .User.ID "suggest_cooldown" true $time}}{{deleteTrigger 0}}
 {{else}}{{deleteTrigger 0}}{{end}}
