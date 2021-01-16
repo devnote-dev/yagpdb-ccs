@@ -80,7 +80,7 @@
         {{end}}
     {{else}}
         {{$tag := ""}}
-        {{range (dbTopEntries (print `snippet_\_%` (lower (index .CmdArgs 0)) `%`) 100 0)}}{{$tag = print $tag (slice .Key 8)}}{{end}}
+        {{range (dbTopEntries (print `snippet\_%` (lower (index .CmdArgs 0)) `%`) 100 0)}}{{$tag = print $tag (slice .Key 8)}}{{end}}
         {{with (dbGet 0 (print "snippet_" $tag))}}{{$i := sdict .Value}}
             {{$msg := sendMessageRetID nil (cembed "title" (print "Tag: " (slice .Key 8|title)) "description" $i.value "color" (or $i.color 0) "image" (sdict "url" (or $i.image "")) "footer" (sdict "text" (print "Author: " (or $i.author "Could Not Find") " (from last edit)\nReact with 📱 to be DMed a mobile version.\u200b")))}}
             {{addMessageReactions nil $msg "📱"}}
