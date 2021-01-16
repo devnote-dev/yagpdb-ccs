@@ -66,13 +66,13 @@
             {{else if eq $sub "dump"}}
                 {{$a := parseArgs 3 "Usage: `;tag dump <name>`\nThis has to be the full tag name." (carg "string" "") (carg "string" "") (carg "string" "name")}}
                 {{with (dbGet 0 (print "tag_" (lower ($a.Get 2))))}}
-                    {{$dump := printf "GUILD: %s (%d)\nTAG NAME: %s\nREQUESTED BY: %s (%d)\n\n%s" $.Guild.Name $.Guild.ID .Key $.User.Username $.User.ID (reReplace `,` (json .Value) ",\n")}}
+                    {{$dump := printf "GUILD: %s (%d)\nTAG NAME: %s\nREQUESTED BY: %s (%d)\n\n%s" $.Guild.Name $.Guild.ID (slice .Key 4) $.User.Username $.User.ID (reReplace `,` (json .Value) ",\n")}}
                     {{sendMessage nil (complexMessage "content" (print "Tag Info Dump for: **" (slice .Key 4|title) "**") "file" $dump)}}
                 {{else}}Unknown tag (specify the whole name).{{end}}
             {{else if eq $sub "help"}}
                 {{$embed := cembed
                     "title" "Tag Help"
-                    "description" "**Key:**\n**<>** Required Args - **[]** Optional Args\nFor default values, put empty quotes \"\" and/or 0 for color.\n\n`;tagname` - Sends the tag\n`;tag add ...` - Adds a tag to the database (under the key `tag_` + tag-name).\n`;tag edit ...` - Edits an existing tag with the specified fields.\n`;tag dump <name>` - Sends the JSON content of a tag\n`;tag del/delete <name>` - Deletes an existing tag. This has to be the full tag name, not an alias.\n`;tag search <name>` - Searches for a tag based on the name/alias provided.\n`;tag list` - Lists all the tags in the server.\n`;tag dump <name>` - Sends a .txt attachment of the raw tag`\n`;tag help` - Sends this message. :)"
+                    "description" "**Key:**\n**<>** Required Args - **[]** Optional Args\nFor default values, put empty quotes \"\" and/or 0 for color.\n\n`;tagname` - Sends the tag\n`;tag add ...` - Adds a tag to the database (under the key `tag_` + tag-name).\n`;tag edit ...` - Edits an existing tag with the specified fields.\n`;tag dump <name>` - Sends the JSON content of a tag\n`;tag del/delete <name>` - Deletes an existing tag. This has to be the full tag name, not an alias.\n`;tag search <name>` - Searches for a tag based on the name/alias provided.\n`;tag list` - Lists all the tags in the server.\n`;tag dump <name>` - Sends the tag entry in JSON format.\n`;tag help` - Sends this message. :)"
                     "footer" (sdict "text" "React with 🗑 to delete this message.\u200b")
                     "timestamp" currentTime}}
                 {{$msg := sendMessageRetID nil $embed}}{{addMessageReactions nil $msg "🗑"}}
