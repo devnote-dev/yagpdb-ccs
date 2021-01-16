@@ -23,6 +23,8 @@ The base prefix for the tag commands are a semi-colon `;`, this is embedded thro
 
 `;tag list` - Lists all the tags in the server.
 
+`;tag dump <name>` - Sends the tag entry in JSON format.
+
 `;tag help` - Sends the Discord embed version of the available commands.
 
 The `add`, `edit`, and `del/delete` sub-commands can only be used by the assigned roles in the main custom command. If you don't have any of those roles, the command is ignored. Additionally, you cant name you tag "tag", this is blocked in the code and will send a "No Special Characters" error. With the `add` and `edit` commands, if you want to skip or ignore a field, you can put quotes `""` in it's space and it will use it's existing or default value. For color, you can either put `""` or `0`, both will default to the black embed color.
@@ -35,26 +37,11 @@ The `add`, `edit`, and `del/delete` sub-commands can only be used by the assigne
 - 🗑 - Deletes the tag message.
 
 ## Planned Features
-- [ ] Snippets-To-Tags Modifier CC (PRIORITY)
 - [ ] Support for hex codes for `color` field
-- [ ] `;tag info <name>` sub-command (still being debated)
 
 ## Other Info
-Regarding compatibility; if you previously used the **snippets** custom command from the YAG support server and don't want to rewrite them, go through the following steps:
+Regarding compatibility; if you previously used the **snippets** custom command from the YAG support server and don't want to rewrite them, you can use the [**tags-mod.go**](https://github.com/NaruDevnote/yagpdb-ccs/blob/updates/tags/tags-mod.go) version of the CC which has been modified to be compatible with the old snippets. Please keep in mind that this version of the CC will not be regularly updated, the main CC is more important. Below is the structure for tags which you should probably use if you are going to edit the CC.
 
-1. Add the custom commands to your server
-2. Add the [**`dbsetmap`**](https://github.com/TheHDCrafter/yagpdb-cc/blob/master/Crafter's%20db%20shit/map/dbsetmap.gotmpl) custom command to your server, made by [**TheHDCrafter**](https://github.com/TheHDCrafter)
-3. Following the instructions for the `dbsetmap` CC, apply the Tags Map Structure to the Snippets Map Structure:
-
-**Snippets Map Structure (JSON):**
-```json
-{
-    "image":"image-url",
-    "value":"snippet content here"
-}
-```
-
-**Tags Map Structure (JSON):**
 ```json
 {
     "author":"tag author",
@@ -63,8 +50,5 @@ Regarding compatibility; if you previously used the **snippets** custom command 
     "image":"image-url"
 }
 ```
-4. In the tags main CC and reaction CC, change `tag\_` to `snippet\_`
-
-Then you are done! I know this is a lengthy process and I am currently working on a Snippets-To-Tags Modifier CC that will do all the heavy work for you. :)
 
 *If you find any bugs or issues, feel free to PR an issue or fix, or contact me through the YAGPDB Support Server*

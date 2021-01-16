@@ -1,13 +1,16 @@
 {{/*
     Counting Commands CC
 
-    Made By Devonte#07545 / Naru#6203
+    Made By Devonte#0745 / Naru#6203
 
     Trigger Type: Regex
     Trigger     : \A\-count(?:\s+|\z)
 
     NOTE: If your prefix is NOT a "-" you need to change the \A\- at the start of the regex to your prefix.
     EXAMPLE: \A\? if the prefix was ?
+
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{if .CmdArgs}}

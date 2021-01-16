@@ -5,6 +5,9 @@
     
     Recommended Trigger Type: Regex
     Recommended Trigger     : \A-r(?:eport)?a(?:dmin)?(?:\s+|\z)
+    
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{/* THINGS TO CHANGE */}}

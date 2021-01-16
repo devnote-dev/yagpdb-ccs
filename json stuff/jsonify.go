@@ -7,6 +7,9 @@
     Recommended Trigger: json
 
     See README.md for more info on use.
+
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{$a := parseArgs 2 "```json <Channel:Mention> <messageID>\njson <Channel:Name> <messageID>\njson <Channel:ID> <messageID>\njson 0 <messageID>\n```**Optional Flags:**\n```\n[-j strict-format:flag]\n[-file/f attachment:flag]```"
@@ -21,20 +24,14 @@
     {{$link = joinStr "/" "https://discordapp.com/channels" .Guild.ID $chan.ID ($a.Get 1)}}
 {{end}}
 {{if ($msg := getMessage $chan.ID ($a.Get 1))}}
-    {{with $msg.Embeds}}
-        {{$struct = print (title (index . 0).Type) " Embed"}}
-    {{else}}
-        {{$struct = or (and $msg.Attachments "Attachment Message") (and (eq $msg.Type 0 6 7 8 9 10 11 12 19) ($type.Get (toInt $msg.Type))) $struct}}
+    {{with $msg.Embeds}}{{$struct = print (title (index . 0).Type) " Embed"}}{{else}}
+    {{$struct = or (and $msg.Attachments "Attachment Message") (and (eq $msg.Type 0 6 7 8 9 10 11 12 19) ($type.Get (toInt $msg.Type))) $struct}}
     {{end}}
     {{$time := div $msg.ID 4194304|mult 1000000|toDuration}}
     {{$json := json $msg}}
     {{if ($a.IsSet 2)}}
-        {{if (reFind `-j` ($a.Get 2))}}
-            {{$json = reReplace `,` $json ",\n"}}
-        {{end}}
-        {{if (reFind `-f(?:ile)?` ($a.Get 2))}}
-            {{$ctx = "The downloadable file attachment will be sent shortly. 👌"}}{{$fa = true}}
-        {{end}}
+        {{if (reFind `-j` ($a.Get 2))}}{{$json = reReplace `,` $json ",\n"}}{{end}}
+        {{if (reFind `-f(?:ile)?` ($a.Get 2))}}{{$ctx = "The downloadable file attachment will be sent shortly. 👌"}}{{$fa = true}}{{end}}
     {{end}}
     {{if or (ge (len $json) 2048) (reFind `\[(?:{.*},?){4,}\]` $json)}}
         {{$ctx = "The message you requested was either too big or contained something that would crash the CC. To prevent this, a downloadable attachment version will be sent instead."}}
