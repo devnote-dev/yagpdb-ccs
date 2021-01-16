@@ -1,5 +1,5 @@
 # Suggestion CC Version 1
-The first version of the suggestion CCs. The CCs part of this version are configurable to your server and can be used by some of the custom commands in the **suggest utilities** folder (check for eligibility).
+The first version of the suggestion CCs. The CCs part of this version are configurable to your server. In future they will be compatible with some of the custom commands in the upcoming **suggest utilities** folder.
 
 ## Features
 - Direct type-to-suggest system
@@ -25,7 +25,5 @@ Use with the recommended trigger type `Regex` and trigger `\A`. **You must** mak
 The Author of the suggestion can also delete the suggestion with `shield + greySlash` if they want.
 
 ![Review Example](https://cdn.discordapp.com/attachments/783061830842974280/788237355084677180/zOZREyzlYk.gif)
-
-\**Note: the gif has not been updated yet but the CC uses a grey slash not a cross :)*
 
 *If you find any bugs or issues, feel free to PR an issue or fix, or contact me through the YAGPDB Support Server*
