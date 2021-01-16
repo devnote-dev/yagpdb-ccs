@@ -1,13 +1,22 @@
-# YAGPDB-CCs
-The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **Devonte#0745** (ID 622146791659405313) 😉
+<h1 align="center"><img src="https://yagpdb.xyz/static/img/avatar.png" height=36px width=36px></img></h1>
 
-**PLEASE NOTE:**
-Even though there hasn't been any recent updates to this repository I am very much still at work with new and existing CCs. With the new license in place, I need to update all existing CCs in this repo to follow it, but instead of pushing singular updates, I'm going to push one big update for the whole repo. This should be done within a day or two from this being published. Thanks for your patience!
+<h1 align="center">YAGPDB-CCs</h1>
+
+The custom commands posted here are for free use, however if you do with to support me you can rep me in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5) or gift Nitro *if you're that generous*. My tag is **Devonte#0745** (ID 622146791659405313) 😉
 
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
-## Available custom commands:
+## Recent Updates:
+- Major update to the repo following the new license
+- Reports System updated to allow images (under message.attachents or image.embeds)
+- Reports System now has message input for mod-actions
+- Tags CC bug fixes and separate snippet-compatible version
+- Added Tags dump subcommand (main only)
+- JSONify shortened code
+- Renamed `template-suggestions` to `suggestions`
+- Small changes to suggestions-v1 reactions
 
+## Available Custom Commands:
 <details>
   <summary>Custom Mute CC</summary>
   <br>
@@ -19,21 +28,21 @@ Even though there hasn't been any recent updates to this repository I am very mu
 <details>
   <summary>JSONify CC v4.15</summary>
   <br>
-  Converts and outputs JSON format of messages, as well as IDs, message types, message snowflake, (etc). See README.md for more info.
+  Converts and outputs JSON format of messages, as well as IDs, message types, message snowflake, (etc). Now with a <code>-f</code> flag for a file attachment output and a <code>-j</code> flag for output formatting. Normal codeblock output is also under the JSON codeblock colours. See README.md for more info.
   </br>
 </details>
 
 <details>
-  <summary>Report CCs (v2-v3)</summary>
+  <summary>Report CCs (v4)</summary>
   <br>
-  A fully functioning reports system with reaction interactions, database storage, and admin commands. You can find out more info in the README.md
+  A fully functioning reports system with reaction interactions, database storage, admin commands, and a type-out mod action response! You can find out more info in the README.md
   </br>
 </details>
 
 <details>
   <summary>Ghost-Ping Detection (v1 & v2)</summary>
   <br>
-  An accurate ghost-ping detection custom command with optional double checks, mention checks (for edited messages) and more. Ghost-Ping CCs are purposefully made to be easily edited / interchangeable, see README.md fore more info.
+  An accurate ghost-ping detection custom command with optional double checks, mention checks (for edited messages) and more. Ghost-Ping CCs are purposefully made to be easily edited / interchangeable and can be done under this license (just keep credits please), see README.md fore more info.
   </br>
 </details>
 
@@ -44,18 +53,48 @@ Even though there hasn't been any recent updates to this repository I am very mu
   </br>
 </details>
 
-## Planned Custom Commands:
+<details>
+  <summary>Tags System CCs</summary>
+  <br>
+  As part of a commission project, introducing: Tags! Tags are a short and simple way to send information to users instead of repeating it. Tags can be used for informational & fun purposes. If you're in the YAGPDB Support Server you may know this as snippets. See `/tags/README.md` for more info.
+  </br>
+</details>
 
-- [ ] GetColour CC
-- [ ] Open-Template Suggestion CCs (DELAYED due to yag-lag)
-- [ ] Softban CC System
+<details>
+  <summary>Suggestions</summary>
+  <br>
+  These are sort-of templates / suggestion systems (not like the general <code>-suggest</code> ones you usually see), currently there is only 1 version:<div><strong>version 1:</strong> This version uses a type-in-chat trigger method to submit suggestions (threshold configurable). Quoting, approving and denying are performed through reactions.</div><strong>version 2:</strong> COMING REALLY SOON™.
+  </br>
+</details>
+
+## Planned Custom Commands:
+Plan | ETA (Release Date)
+-----|-----
+GetColour CC | 17/01/2021
+AutoPartner CCs | Soon™
+Taking a small break after that |
+Softban CC System | Unknown
 
 *This list is in order of priority, so you may see it changing often*
 
-## Other Info
-- The Starboard CC project has been suspended as there is a much better system made by **Crenshaw1312**! [Click Here](https://github.com/Crenshaw1312/Yagpdb-ccs/tree/master/Fun/starboard) to go to his repo, his system also has optional plugins compatible with YouTube links, Twitter feed links, and Github links!
-- The first template suggestion CC has been pushed, [click here](https://github.com/NaruDevnote/yagpdb-ccs/tree/master/template-suggestions/v1) to go to version one.
-- Snipe CC is being removed again because there is no proper use for it.
-
 ## Contributing
 If you have a suggestion for a custom command or custom commands to be made or added to this repo, you can contact me through Discord, comment your suggestion in the new discussions area in this repo, or open an Issue with "suggestion" in the name and I will get back to you ASAP!
+
+## Other Info
+My testing server will now be open for people to join and ask questions/suggest ideas/etc, you can find the invite below.
+
+This repository is now officially licensed under the GNU General Public License v3 which you can read in the link below, and all existing CCs will have the following mark in the note to represent this ⬇⬇⬇ Please do not remove this, give credit where credit is due. :)
+```
+© NaruDevnote 2020-2021 (GNU GPL v3)
+https://github.com/NaruDevnote/yagpdb-ccs
+```
+
+### Links!
+- 📑 [License](https://github.com/NaruDevnote/yagpdb-ccs/blob/master/LICENSE)
+- 🌄 [Dev's Hideout](https://discord.gg/KK3HYhbzgG) (my test server)
+
+Other Cool Githubs:
+- DZ-TM: [Yagpdb.xyz](https://github.com/DZ-TM/Yagpdb.xyz)
+- Crenshaw/Sylvester: [Yagpdb-ccs](https://github.com/Crenshaw1312/Yagpdb-ccs)
+- Piterxyz: [yagpdb-cc](https://github.com/Piterxyz/yagpdb-cc)
+- TheHDCrafter: [yagpdb-cc](https://github.com/TheHDCrafter/yagpdb-cc)
