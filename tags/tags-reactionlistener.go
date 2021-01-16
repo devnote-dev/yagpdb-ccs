@@ -2,10 +2,12 @@
     Tags ReactionListener CC
 
     Made By Devonte#0745 / Naru#6203
-    Contributors: Maverick Wolf#1010
+    Contributors: Maverick Wolf#1010, TheHDCrafter#0001
 
     Recommended Trigger Type: Reaction (Added and Removed)
 
+    © NaruDevnote 2020-2021 (GNU GPL v3)
+    https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
 {{if .ReactionAdded}}
@@ -20,9 +22,8 @@
                     {{sendDM (printf "\n**%s**\n%s\n%s\n%s" $msg.Title $msg.Description (or $msg.Image (sdict "URL" "")).URL (reReplace `\)\n.+` $msg.Footer.Text ")"))}}
                     {{deleteAllMessageReactions nil .Message.ID}}{{addMessageReactions nil .Message.ID "📱"}}
                 {{else if and (eq .Reaction.Emoji.Name "🗑") (reFind `React with 🗑 to delete this message\.` $msg.Footer.Text)}}
-                    {{deleteAllMessageReactions nil .Message.ID}}
-                    {{deleteMessage nil .Message.ID 1}}
-                {{else if and (eq .Reaction.Emoji.Name "◀" "▶") (reFind `React with 🗑 to delete this message.\x{200b}\nPage: \d+` $msg.Footer.Text)}}
+                    {{deleteMessage nil .Message.ID 0}}
+                {{else if and (eq .Reaction.Emoji.Name "◀" "▶") (reFind `React with 🗑 to delete this message\.\x{200b}\nPage: \d+` $msg.Footer.Text)}}
                     {{$list := ""}}{{$skip := 0}}
                     {{$page := (reFind `\d+` $msg.Footer.Text|toInt)}}
                     {{if eq .Reaction.Emoji.Name "▶"}}
@@ -39,7 +40,7 @@
                     {{else if eq .Reaction.Emoji.Name "◀"}}
                         {{if ne $page 1}}
                             {{$msg.Footer.Set "text" (print "React with 🗑 to delete this message.\u200b\nPage: " (sub $page 1))}}
-                            {{$skip = div $page 10|roundCeil|toInt}}
+                            {{$skip = sub (mult (add $page -1) 10) 10}}
                             {{range (dbTopEntries `tag\_%` 10 $skip)}}{{$list = print $list "\n`" (slice .Key 4) "`"}}{{end}}
                             {{if $list}}
                                 {{$msg.Set "description" $list}}
