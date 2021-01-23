@@ -5,7 +5,7 @@
     Modified By: WickedWizard#3588
 
     Trigger Type: Regex `\A(\-\s?|<@!?204255221017214977>\s*)count(?:\s+|\z)`
-    
+
     Replace Prefix if its not `-`
 
     © NaruDevnote 2020-2021 (GNU GPL v3)
@@ -145,8 +145,7 @@
     {{else if eq $cmd "shifthelp"}}
         {{$embed := cembed
             "title" "Shifting from One Counting Method to Another"
-            "description" "Do you want to shift from one counting method to another? \nLike from Normal to Skip or Skip to Normal or any other combination? \n**__THIS WILL RESET ALL YOUR DATABASES, EXCLUDING THE TRACKER__** \nWatch the GIF below for an example."
-            "image" (sdict "url" "")
+            "description" "Do you want to shift from one counting method to another? \nLike from Normal to Skip or Skip to Normal or any other combination? \n\n**__THIS WILL RESET ALL YOUR DATABASES, EXCLUDING THE TRACKER__** \nRun `shift` twice if you're sure of this."
             "timestamp" currentTime
             "color" $col
             "footer" (sdict "text" "Warning:- This cannot be reverted at any cost.")}}
