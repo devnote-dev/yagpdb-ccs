@@ -1,11 +1,11 @@
 {{/*
     Counting Pagination Reaction CC
-
     Made By Devonte#0745 / Naru#6203
+    Modified by WickedWizard#3588
 
     Trigger Type: Reaction (Added Only)
-
     © NaruDevnote 2020-2021 (GNU GPL v3)
+
     https://github.com/NaruDevnote/yagpdb-ccs
 */}}
 
@@ -21,7 +21,7 @@
             {{$page := toInt (reFind `\d+` $msg.Footer.Text)}}
             {{$list := ""}}{{$rank := 1}}{{$r := false}}
             {{if eq .Reaction.Emoji.Name "➡"}}
-                {{if not (reFind `No entries` $msg.Description)}}
+                {{if or (not (reFind `No entries` $msg.Description)) (not (reFind `This server does not have Tracker enabled, so I cannot get the Leaderboard` $msg.Description))}}
                     {{$rank = mult $page 10}}{{$r = true}}
                     {{$msg.Footer.Set "text" (print "Page: " (add $page 1))}}
                 {{end}}
