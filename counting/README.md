@@ -1,8 +1,6 @@
 # Counting System CCs
 This is an updated and more efficient version of **TimCampy118#5636**'s original CCs (you can find them in the [YAGPDB Support Server](https://discord.com/invite/4udtcA5)). Credits go to him for the original code.
 
-*I am aware that this system does not have an automatic edit-channel-topic feature, this was intentionally left out due to lack of time and issues with adding it to the code. This will be added in future!*
-
 ## Features
 - Only 1 CC required (others are optional accessories)
 - Faster counting
@@ -10,6 +8,8 @@ This is an updated and more efficient version of **TimCampy118#5636**'s original
 - Simpler code (easier to edit)
 - Paginated leaderboard embed (less lag)
 - Additional counting commands
+- Auto-Channel Edit Topic
+- Skip Counting by Even or Odd Numbers
 - Auto-schedule clean of commands (stuff that shouldn't be in counting)
 
 ## Usage
@@ -30,8 +30,12 @@ Aliases: `leaderb`, `lb`
 
 `-count set <number:int>` - Edits the current count to the specified int (whole number). Requires the **Manage Messages** permission to use.
 
-## Planned Features
-- [ ] Add `-count ban/unban <@User/ID>` commands for people who try to cheat
-- [ ] Add auto edit-channel-topic code for the counting goal
+`-count ban <@User/ID>` - Bans an user from Counting. RoleID Needed. Requires the **Manage Messages** permission to use.
+
+`-count unban <@User/ID>` - Unbans an user from Counting. Requires the **Manage Messages** permission to use.
+
+`-count shifthelp` - Shows the Help Menu for Shifting from One Type of Counting to another.
+
+`-count shift` - Shifts from One Type of Counting to another. Needs to be run twice within 5 minutes for confirmation. Requires the **Administrator** permission to use.
 
 *If you find any bugs or issues, feel free to PR an issue or fix, or contact me through the YAGPDB Support Server*
