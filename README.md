@@ -54,13 +54,6 @@ The custom commands posted here are for free use, however if you do with to supp
 </details>
 
 <details>
-  <summary>Tags System CCs</summary>
-  <br>
-  As part of a commission project, introducing: Tags! Tags are a short and simple way to send information to users instead of repeating it. Tags can be used for informational & fun purposes. If you're in the YAGPDB Support Server you may know this as snippets. See `/tags/README.md` for more info.
-  </br>
-</details>
-
-<details>
   <summary>Suggestions</summary>
   <br>
   These are sort-of templates / suggestion systems (not like the general <code>-suggest</code> ones you usually see), currently there is only 1 version:<div><strong>version 1:</strong> This version uses a type-in-chat trigger method to submit suggestions (threshold configurable). Quoting, approving and denying are performed through reactions.</div><strong>version 2:</strong> COMING REALLY SOON™.
@@ -70,9 +63,9 @@ The custom commands posted here are for free use, however if you do with to supp
 ## Planned Custom Commands:
 Plan | ETA (Release Date)
 -----|-----
-GetColour CC | 17/01/2021
-AutoPartner CCs | Soon™
+GetColour CC | 12/02/2021
 Taking a small break after that |
+AutoPartner CCs | Soon™
 Softban CC System | Unknown
 
 *This list is in order of priority, so you may see it changing often*
@@ -97,4 +90,3 @@ Other Cool Githubs:
 - DZ-TM: [Yagpdb.xyz](https://github.com/DZ-TM/Yagpdb.xyz)
 - Crenshaw/Sylvester: [Yagpdb-ccs](https://github.com/Crenshaw1312/Yagpdb-ccs)
 - Piterxyz: [yagpdb-cc](https://github.com/Piterxyz/yagpdb-cc)
-- TheHDCrafter: [yagpdb-cc](https://github.com/TheHDCrafter/yagpdb-cc)
