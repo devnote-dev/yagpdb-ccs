@@ -12,6 +12,8 @@ This is an updated and more efficient version of **TimCampy118#5636**'s original
 - Skip Counting by Even or Odd Numbers
 - Auto-schedule clean of commands (stuff that shouldn't be in counting)
 
+***__Sometimes you might find that the Main Counting CC Breaks after a Switch from One Method to Another. There is nothing I can do for this, as Discord has a Channel Topic Edit Rate Limit of 2 per 10 Minutes. To fix this, just wait for 10minutes and then try again.__***
+
 ## Usage
 This is primarily for the count commands, usage for the main command is just... count. Remember to limit the channels the main CC can run in to the count channel only!!!
 
