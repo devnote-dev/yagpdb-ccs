@@ -10,7 +10,6 @@ The custom commands posted here are for free use, however if you do with to supp
 - Major update to the repo following the new license
 - Reports System updated to allow images (under message.attachents or image.embeds)
 - Reports System now has message input for mod-actions
-- Tags CC bug fixes and separate snippet-compatible version
 - Added Tags dump subcommand (main only)
 - JSONify shortened code
 - Renamed `template-suggestions` to `suggestions`
@@ -65,6 +64,7 @@ Plan | ETA (Release Date)
 -----|-----
 GetColour CC | 12/02/2021
 Taking a small break after that |
+Counting Update | Soon™
 AutoPartner CCs | Soon™
 Softban CC System | Unknown
 
