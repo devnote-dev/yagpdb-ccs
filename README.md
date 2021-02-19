@@ -7,9 +7,11 @@ The custom commands posted here are for free use, however if you do with to supp
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
 ## Recent Updates:
+
 - Introducing Todo List CCs
 - Cleared some stuff up with Tags
 - Added a new repo link below!
+
 
 ## Available Custom Commands:
 <details>
@@ -68,6 +70,7 @@ Plan | ETA (Release Date)
 Counting CCs Update | Soon™
 Inspect CC | Soon™
 AutoPartner CC System | Soon™
+
 
 *This list is in order of priority, so you may see it changing often*
 
