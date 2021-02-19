@@ -56,17 +56,23 @@ The custom commands posted here are for free use, however if you do with to supp
 <details>
   <summary>Suggestions</summary>
   <br>
-  These are sort-of templates / suggestion systems (not like the general <code>-suggest</code> ones you usually see), currently there is only 1 version:<div><strong>version 1:</strong> This version uses a type-in-chat trigger method to submit suggestions (threshold configurable). Quoting, approving and denying are performed through reactions.</div><strong>version 2:</strong> COMING REALLY SOON™.
+  These are sort-of templates / suggestion systems (not like the general <code>-suggest</code> ones you usually see), currently there is only 1 version:<div><strong>version 1:</strong> This version uses a type-in-chat trigger method to submit suggestions (threshold configurable). Quoting, approving and denying are performed through reactions.</div><strong>version 2:</strong> COMING SOON™.
+  </br>
+</details>
+
+<details>
+  <summary>Todo CC</summary>
+  <br>
+  This is a simple todo list CC that can set tasks and schedule reminders on your list! More features are coming soon, see README.md for more!
   </br>
 </details>
 
 ## Planned Custom Commands:
 Plan | ETA (Release Date)
 -----|-----
-GetColour CC | 12/02/2021
-Taking a small break after that |
-AutoPartner CCs | Soon™
-Softban CC System | Unknown
+Counting CCs Update | Soon™
+Inspect CC | Soon™
+AutoPartner CC System | Soon™
 
 *This list is in order of priority, so you may see it changing often*
 
@@ -76,7 +82,7 @@ If you have a suggestion for a custom command or custom commands to be made or a
 ## Other Info
 My testing server will now be open for people to join and ask questions/suggest ideas/etc, you can find the invite below.
 
-This repository is now officially licensed under the GNU General Public License v3 which you can read in the link below, and all existing CCs will have the following mark in the note to represent this ⬇⬇⬇ Please do not remove this, give credit where credit is due. :)
+This repository is officially licensed under the GNU General Public License v3 which you can read in the link below, and all existing CCs will have the following mark in the note to represent this ⬇⬇⬇ Please do not remove this, give credit where credit is due. :)
 ```
 © NaruDevnote 2020-2021 (GNU GPL v3)
 https://github.com/NaruDevnote/yagpdb-ccs
@@ -84,9 +90,10 @@ https://github.com/NaruDevnote/yagpdb-ccs
 
 ### Links!
 - 📑 [License](https://github.com/NaruDevnote/yagpdb-ccs/blob/master/LICENSE)
-- 🌄 [Dev's Hideout](https://discord.gg/KK3HYhbzgG) (my test server)
+- 🌄 [The Hideout](https://discord.gg/KK3HYhbzgG) (my test server)
 
 Other Cool Githubs:
 - DZ-TM: [Yagpdb.xyz](https://github.com/DZ-TM/Yagpdb.xyz)
 - Crenshaw/Sylvester: [Yagpdb-ccs](https://github.com/Crenshaw1312/Yagpdb-ccs)
 - Piterxyz: [yagpdb-cc](https://github.com/Piterxyz/yagpdb-cc)
+- L-Zeuch: [lagpdb-cc](https://github.com/l-zeuch/lagpdb-cc)
