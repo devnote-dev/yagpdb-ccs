@@ -7,14 +7,9 @@ The custom commands posted here are for free use, however if you do with to supp
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
 ## Recent Updates:
-- Major update to the repo following the new license
-- Reports System updated to allow images (under message.attachents or image.embeds)
-- Reports System now has message input for mod-actions
-- Tags CC bug fixes and separate snippet-compatible version
-- Added Tags dump subcommand (main only)
-- JSONify shortened code
-- Renamed `template-suggestions` to `suggestions`
-- Small changes to suggestions-v1 reactions
+- Introducing Todo List CCs
+- Cleared some stuff up with Tags
+- Added a new repo link below!
 
 ## Available Custom Commands:
 <details>
