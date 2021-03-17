@@ -6,12 +6,10 @@ The custom commands posted here are for free use, however if you do with to supp
 
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
+Sorry I haven't been maintaining this repo recently, I've been busy developing a bot with some friends, feel free to check it out below under [links](#links)! We're working really hard on it and appreciate any support!
+
 ## Recent Updates:
-
-- Introducing Todo List CCs
-- Cleared some stuff up with Tags
-- Added a new repo link below!
-
+- Rework of some CCs
 
 ## Available Custom Commands:
 <details>
@@ -71,7 +69,6 @@ Counting CCs Update | Soon™
 Inspect CC | Soon™
 AutoPartner CC System | Soon™
 
-
 *This list is in order of priority, so you may see it changing often*
 
 ## Contributing
@@ -89,6 +86,7 @@ https://github.com/NaruDevnote/yagpdb-ccs
 ### Links!
 - 📑 [License](https://github.com/NaruDevnote/yagpdb-ccs/blob/master/LICENSE)
 - 🌄 [The Hideout](https://discord.gg/KK3HYhbzgG) (my test server)
+- 🛠 [Radeon Development](https://discord.gg/xcZwGhSy4G)
 
 Other Cool Githubs:
 - DZ-TM: [Yagpdb.xyz](https://github.com/DZ-TM/Yagpdb.xyz)
