@@ -6,7 +6,7 @@ The custom commands posted here are for free use, however if you do with to supp
 
 **I am currently taking requests for CCs to add to this repository!** See [Contributing](#Contributing) for more info.
 
-Sorry I haven't been maintaining this repo recently, I've been busy developing a bot with some friends, feel free to check it out below under [links](#links)! We're working really hard on it and appreciate any support!
+Sorry I haven't been maintaining this repo recently, I've been busy developing a bot with some friends, feel free to check it out below under [links](#links)! We're working really hard on it and appreciate any support! There will be CC updates for the repo coming shortly!!
 
 ## Recent Updates:
 - Rework of some CCs
