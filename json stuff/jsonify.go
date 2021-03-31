@@ -9,7 +9,7 @@
     See README.md for more info on use.
 
     © NaruDevnote 2020-2021 (GNU GPL v3)
-    https://github.com/NaruDevnote/yagpdb-ccs
+    https://github.com/devnote-dev/yagpdb-ccs
 */}}
 
 {{$a := parseArgs 2 "```json <Channel:Mention> <messageID>\njson <Channel:Name> <messageID>\njson <Channel:ID> <messageID>\njson 0 <messageID>\n```**Optional Flags:**\n```\n[-j strict-format:flag]\n[-file/f attachment:flag]```"
