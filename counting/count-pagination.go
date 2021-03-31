@@ -6,7 +6,7 @@
     Trigger Type: Reaction (Added Only)
 
     © NaruDevnote 2020-2021 (GNU GPL v3)
-    https://github.com/NaruDevnote/yagpdb-ccs
+    https://github.com/devnote-dev/yagpdb-ccs
 */}}
 
 {{if .ReactionAdded}}

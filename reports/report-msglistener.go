@@ -9,7 +9,7 @@
     NOTE: Make sure this is set to run in the LOG-CHANNEL ONLY.
 
     © NaruDevnote 2020-2021 (GNU GPL v3)
-    https://github.com/NaruDevnote/yagpdb-ccs
+    https://github.com/devnote-dev/yagpdb-ccs
 */}}
 
 {{/* THINGS TO CHANGE */}}
