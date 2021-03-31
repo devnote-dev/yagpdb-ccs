@@ -9,7 +9,7 @@
     NOTE: Make sure this only runs in the suggestion channel (see tmplsuggest-v1.md for more info)
 
     © NaruDevnote 2020-2021 (GNU GPL v3)
-    https://github.com/NaruDevnote/yagpdb-ccs
+    https://github.com/devnote-dev/yagpdb-ccs
 */}}
 
 {{/* THINGS TO CHANGE */}}
